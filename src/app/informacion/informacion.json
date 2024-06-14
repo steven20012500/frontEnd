@@ -1,0 +1,33 @@
+[
+    {
+      "gasto": "Vivienda",
+      "descripcion": "Pago mensual del alquiler o hipoteca.",
+      "informacionAdicional": "gastos de mantenimiento y reparaciones.",
+      "imagen": "assets/images/vivienda.jpg"
+    },
+    {
+      "gasto": "Salud",
+      "descripcion": "Gastos médicos y seguros de salud.",
+      "informacionAdicional": "Cobertura de medicamentos y consultas médicas.",
+      "imagen": "assets/images/salud.jpg"
+    },
+    {
+      "gasto": "Educación",
+      "descripcion": "Gastos de matrícula y materiales educativos.",
+      "informacionAdicional": "cursos y actividades extracurriculares.",
+      "imagen": "assets/images/educacion.jpg"
+    },
+    {
+      "gasto": "Transporte",
+      "descripcion": "Gastos en transporte público y combustible.",
+      "informacionAdicional": "mantenimiento del vehículo.",
+      "imagen": "assets/images/transporte.jpg"
+    },
+    {
+      "gasto": "Alimentación",
+      "descripcion": "Gastos en alimentos y bebidas.",
+      "informacionAdicional": "Incluye compras en supermercados y restaurantes.",
+      "imagen": "assets/images/alimentacion.jpg"
+    }
+  ]
+  
