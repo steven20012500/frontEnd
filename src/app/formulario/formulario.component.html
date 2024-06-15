@@ -1,31 +1,36 @@
-
-   <form>
-    <div class="form-group">
-    <h1 class="text-center text-primary">Facturas Gastos</h1>
-    <div class="input-group">
-    <label for="ruc" class="form-label">Ruc</label>
-    <input type="text" class="form-control" id="ruc" name="ruc"[(ngModel)]="ruc">
-    </div>
-    <div class="input-group">
-    <label for="valor" class="form-label">Valor de factura</label>
-    <input type="text" class="form-control" id="valor" name="valor"[(ngModel)]="valor" >
-    </div>
-    <div class="input-group">
-    <label for="gasto" class="form-label">Gasto</label>
-    <select class="form-select" aria-label="gasto" name="gasto"[(ngModel)]="gasto">
-    <option selected>Escoja el tipo de gasto</option>
-    <option value="Salud">Salud</option>
-    <option value="Vivienda">Vivienda</option>
-    <option value="Educacion">Educación</option>
-    <option value="Ninguno">Ninguno</option>
-    </select>
-    </div>
-   <button>Agregar</button>
-</div>
-</form>
-<div>
+<form (ngSubmit)="enviarFactura()">
+   <div class="form-group">
+     <h1 class="text-center text-primary">Facturas Gastos</h1>
+ 
+     <div class="input-group mb-3">
+       <label for="ruc" class="form-label">Ruc</label>
+       <input type="text" class="form-control" id="ruc" name="ruc" [(ngModel)]="facturaDatos.ruc" required>
+     </div>
+ 
+     <div class="input-group mb-3">
+       <label for="valor" class="form-label">Valor de factura</label>
+       <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="facturaDatos.valor" required>
+     </div>
+ 
+     <div class="input-group mb-3">
+       <label for="gasto" class="form-label">Gasto</label>
+       <select class="form-select" id="gasto" name="gasto" [(ngModel)]="facturaDatos.gasto" required>
+         <option value="" disabled selected>Escoja el tipo de gasto</option>
+         <option value="Salud">Salud</option>
+         <option value="Vivienda">Vivienda</option>
+         <option value="Educacion">Educación</option>
+         <option value="Ninguno">Ninguno</option>
+       </select>
+     </div>
+ 
+     <button type="submit" class="btn btn-primary">Enviar</button>
+   </div>
+ </form>
+ 
+<!--<div>
     <p>RUC: {{ruc}}</p>
     <p>VALOR: {{valor}}</p>
     <p>TIPO GASTO: {{gasto}}</p>
    </div>
+-->
    

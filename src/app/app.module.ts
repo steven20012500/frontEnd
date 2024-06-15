@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms'
-
+import { HttpClientModule } from '@angular/common/http'; // Importar las dependencias necesarias
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { GaleriaComponent } from './galeria/galeria.component'; 
 import { InformacionComponent } from './informacion/informacion.component';
 import { FormularioComponent } from './formulario/formulario.component'; 
-import { DataService} from './data.service'; 
+import { GastoService} from './gasto.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +20,11 @@ import { DataService} from './data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
-    provideClientHydration(),
-    DataService
+   // provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })

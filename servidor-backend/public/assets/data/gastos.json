@@ -1,0 +1,42 @@
+[
+  {
+    "ruc": "1234567890",
+    "valor": 100,
+    "gasto": "Salud"
+  },
+  {
+    "ruc": "0987654321",
+    "valor": 200,
+    "gasto": "Vivienda"
+  },
+  {
+    "ruc": "fhgfgh",
+    "valor": "213213",
+    "gasto": "Salud"
+  },
+  {
+    "ruc": "123213",
+    "valor": "0234",
+    "gasto": "Vivienda"
+  },
+  {
+    "ruc": "123213",
+    "valor": "0234",
+    "gasto": "Vivienda"
+  },
+  {
+    "ruc": "123213",
+    "valor": "0",
+    "gasto": "Vivienda"
+  },
+  {
+    "ruc": "123213",
+    "valor": "23",
+    "gasto": "Salud"
+  },
+  {
+    "ruc": "1727735365",
+    "valor": "885.288",
+    "gasto": "Educacion"
+  }
+]

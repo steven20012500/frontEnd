@@ -1,36 +1,41 @@
 import { Component } from '@angular/core';
-import { DataService } from '../data.service';
+import { GastoService } from '../gasto.service';
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })
 export class FormularioComponent {
-  ngOnInit():void {}
-  ruc:string='99999999001';
-  valor:number=0.0;;
-  gasto:string='Ninguno';
-  constructor(private dataService: DataService) {}
+  facturaDatos = {
+    ruc: '',
+    valor: '',
+    gasto: ''
+  };
 
-  onSubmit() {
-    const datos = {
-      ruc: this.ruc,
-      valor: this.valor,
-      gasto: this.gasto
-    };
-    this.dataService.agregarFactura(datos).subscribe(
-      response => {
-        console.log('Datos enviados al servidor:', response);
-      },
-      error => {
-        console.error('Error al enviar datos al servidor:', error);
-      }
-    );
+  constructor(private gastoService: GastoService) { }
 
-
-
-    function gastos(a: number, b: number): number {
-      return a + b;
+  enviarFactura() {
+    if (this.facturaDatos.ruc && this.facturaDatos.valor && this.facturaDatos.gasto) {
+      this.gastoService.agregarFactura(this.facturaDatos).subscribe({
+        next: response => {
+          console.log('Factura enviada', response);
+          // Resetea el formulario después de enviarlo
+          this.facturaDatos = {
+            ruc: '',
+            valor: '',
+            gasto: ''
+          };
+        },
+        error: error => {
+          console.error('Error al enviar la factura', error);
+        },
+        complete: () => {
+          console.log('Solicitud completada');
+        }
+      });
+    } else {
+      alert('Por favor complete todos los campos');
+    }
   }
   }
 
@@ -38,11 +43,3 @@ export class FormularioComponent {
 
 
 
-
-
-
-
-
-
-
-}
