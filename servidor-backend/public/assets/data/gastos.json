@@ -38,5 +38,10 @@
     "ruc": "1727735365",
     "valor": "885.288",
     "gasto": "Educacion"
+  },
+  {
+    "ruc": "123456",
+    "valor": "8888.98",
+    "gasto": "Vivienda"
   }
 ]
