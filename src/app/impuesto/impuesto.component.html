@@ -1,0 +1,42 @@
+<form (ngSubmit)="enviarFactura()">
+    <div class="form-group">
+      <h1 class="text-center text-primary">Facturas Gastos</h1>
+  
+      <div class="input-group mb-3">
+        <label for="cedula" class="form-label">Cedula:</label>
+        <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="facturaDatos.cedula" >
+      </div>
+  
+      <div class="input-group mb-3">
+        <label for="ingreso" class="form-label">Ingreso:</label>
+        <input type="text" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="facturaDatos.ingreso" >
+      </div>
+      
+      <div class="input-group mb-3">
+       <label for="salud" class="form-label">Salud:</label>
+       <input type="text" class="form-control" id="salud" name="salud" [(ngModel)]="facturaDatos.salud" >
+     </div>
+     
+     <div class="input-group mb-3">
+       <label for="educacion" class="form-label">Educación:</label>
+       <input type="text" class="form-control" id="educacion" name="educacion" [(ngModel)]="facturaDatos.educacion" >
+     </div>
+     
+     <div class="input-group mb-3">
+       <label for="vestimenta" class="form-label">Vestimenta:</label>
+       <input type="text" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="facturaDatos.vestimenta" >
+     </div>
+ 
+     <div class="input-group mb-3">
+       <label for="vivienda" class="form-label">Vivienda:</label>
+       <input type="text" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="facturaDatos.vivienda" >
+     </div>
+ 
+     <div class="input-group mb-3">
+       <label for="alimentacion" class="form-label">Alimentación:</label>
+       <input type="text" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="facturaDatos.alimentacion" >
+     </div> 
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+  

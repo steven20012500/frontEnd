@@ -1,0 +1,12 @@
+[
+  {
+    "ruc": "1234567",
+    "valor": "9898.28",
+    "gasto": "Vivienda"
+  },
+  {
+    "ruc": "123213",
+    "valor": "0234",
+    "gasto": "Educacion"
+  }
+]

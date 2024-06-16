@@ -9,13 +9,15 @@ import { GaleriaComponent } from './galeria/galeria.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { FormularioComponent } from './formulario/formulario.component'; 
 import { GastoService} from './gasto.service';
+import { ImpuestoComponent } from './impuesto/impuesto.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     GaleriaComponent,
     InformacionComponent,
-    FormularioComponent
+    FormularioComponent,
+    ImpuestoComponent
     ],
   imports: [
     BrowserModule,

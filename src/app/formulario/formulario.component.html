@@ -3,54 +3,36 @@
      <h1 class="text-center text-primary">Facturas Gastos</h1>
  
      <div class="input-group mb-3">
-       <label for="cedula" class="form-label">Cedula:</label>
-       <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="facturaDatos.cedula" >
+       <label for="ruc" class="form-label">Ruc:</label>
+       <input type="text" class="form-control" id="ruc" name="ruc" [(ngModel)]="facturaDatos.ruc" >
      </div>
  
      <div class="input-group mb-3">
-       <label for="ingreso" class="form-label">Ingreso:</label>
-       <input type="text" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="facturaDatos.ingreso" >
+       <label for="valor" class="form-label">Valor:</label>
+       <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="facturaDatos.valor" >
      </div>
-     
-     <div class="input-group mb-3">
-      <label for="salud" class="form-label">Salud:</label>
-      <input type="text" class="form-control" id="salud" name="salud" [(ngModel)]="facturaDatos.salud" >
-    </div>
-    
-    <div class="input-group mb-3">
-      <label for="educacion" class="form-label">Educación:</label>
-      <input type="text" class="form-control" id="educacion" name="educacion" [(ngModel)]="facturaDatos.educacion" >
-    </div>
-    
-    <div class="input-group mb-3">
-      <label for="vestimenta" class="form-label">Vestimenta:</label>
-      <input type="text" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="facturaDatos.vestimenta" >
-    </div>
 
-    <div class="input-group mb-3">
-      <label for="vivienda" class="form-label">Vivienda:</label>
-      <input type="text" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="facturaDatos.vivienda" >
-    </div>
+     <div class="input-group">
+      <label for="gasto" class="form-label">Gasto:</label>
+      <select class="form-select" aria-label="gasto" name="gasto" [(ngModel)]="facturaDatos.gasto">
+      <option selected>Escoja el tipo de gasto</option>
+      <option value="Salud">Salud</option>
+      <option value="Vivienda">Vivienda</option>
+      <option value="Educacion">Educación</option>
+      <option value="Ninguno">Ninguno</option>
+      </select>
+      </div>
 
-    <div class="input-group mb-3">
-      <label for="alimentacion" class="form-label">Alimentación:</label>
-      <input type="text" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="facturaDatos.alimentacion" >
-    </div> 
      <button type="submit" class="btn btn-primary">Enviar</button>
    </div>
  </form>
  
-<!--Sección para mostrar las facturas recientes -->
-<div class="mt-5">
-  <h2 class="text-center text-primary">Calcular Impuestos</h2>
-  <button (click)="calculoImpuestos()" class="btn btn-primary">Calcular</button>
+ <div class="mt-5">
+  <h2 class="text-center text-primary">Datos de la Factura</h2>
+  <p><strong>RUC:</strong> {{ facturaDatos.ruc }}</p>
+  <p><strong>Valor:</strong> {{ facturaDatos.valor }}</p>
+  <p><strong>Gasto:</strong> {{ facturaDatos.gasto }}</p>
 </div>
-<!--
-<button (click)="realizarFuncionesConDatos()" class="btn btn-primary ">Ver Facturas</button> 
-<div>
-    <p>RUC: {{ruc}}</p>
-    <p>VALOR: {{valor}}</p>
-    <p>TIPO GASTO: {{gasto}}</p>
-   </div>
--->
+
+
    
