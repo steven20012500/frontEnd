@@ -1,47 +1,100 @@
 [
   {
-    "ruc": "1234567890",
-    "valor": 100,
-    "gasto": "Salud"
+    "ingreso": 1000,
+    "salud": 10,
+    "educacion": 1,
+    "vestimenta": 0,
+    "vivienda": 0,
+    "alimentacion": 0
   },
   {
-    "ruc": "0987654321",
-    "valor": 200,
-    "gasto": "Vivienda"
+    "cedula": "1727735365",
+    "ingreso": "20000",
+    "salud": "21231",
+    "educacion": "121",
+    "vestimenta": "12",
+    "vivienda": "12",
+    "alimentacion": "1212"
   },
   {
-    "ruc": "fhgfgh",
-    "valor": "213213",
-    "gasto": "Salud"
+    "cedula": "121212",
+    "ingreso": "20000",
+    "salud": "2000",
+    "educacion": "1500",
+    "vestimenta": "500",
+    "vivienda": "0",
+    "alimentacion": "0"
   },
   {
-    "ruc": "123213",
-    "valor": "0234",
-    "gasto": "Vivienda"
+    "cedula": "1727735365",
+    "ingreso": "20000",
+    "salud": "12",
+    "educacion": "2323",
+    "vestimenta": "2323",
+    "vivienda": "2323",
+    "alimentacion": "2323"
   },
   {
-    "ruc": "123213",
-    "valor": "0234",
-    "gasto": "Vivienda"
+    "cedula": "1727735365",
+    "ingreso": "20000",
+    "salud": "2000",
+    "educacion": "12",
+    "vestimenta": "1212",
+    "vivienda": "1212",
+    "alimentacion": "12121"
   },
   {
-    "ruc": "123213",
-    "valor": "0",
-    "gasto": "Vivienda"
+    "cedula": "1727735365",
+    "ingreso": "1212",
+    "salud": "12121",
+    "educacion": "2121",
+    "vestimenta": "21212",
+    "vivienda": "1212",
+    "alimentacion": "1212"
   },
   {
-    "ruc": "123213",
-    "valor": "23",
-    "gasto": "Salud"
+    "cedula": "1727735365",
+    "ingreso": "20000",
+    "salud": "2323",
+    "educacion": "2323",
+    "vestimenta": "2323",
+    "vivienda": "2323",
+    "alimentacion": "2323232"
   },
   {
-    "ruc": "1727735365",
-    "valor": "885.288",
-    "gasto": "Educacion"
+    "cedula": "1727735365",
+    "ingreso": "2323",
+    "salud": "2323",
+    "educacion": "232",
+    "vestimenta": "2323",
+    "vivienda": "2323",
+    "alimentacion": "2323"
   },
   {
-    "ruc": "123456",
-    "valor": "8888.98",
-    "gasto": "Vivienda"
+    "cedula": "1727735365",
+    "ingreso": "1212121212",
+    "salud": "2000",
+    "educacion": "1212121212",
+    "vestimenta": "12121212",
+    "vivienda": "212121",
+    "alimentacion": "121212"
+  },
+  {
+    "cedula": "1727735365",
+    "ingreso": "20000",
+    "salud": "1",
+    "educacion": "1",
+    "vestimenta": "1",
+    "vivienda": "1",
+    "alimentacion": "1"
+  },
+  {
+    "cedula": "232323",
+    "ingreso": "32000",
+    "salud": "1000",
+    "educacion": "1000",
+    "vestimenta": "1000",
+    "vivienda": "1000",
+    "alimentacion": "2000"
   }
 ]

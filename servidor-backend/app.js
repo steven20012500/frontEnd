@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/api/agregarFactura', (req, res) => {
-  const { ruc, valor, gasto } = req.body;
-  const datos = { ruc, valor, gasto };
+  const { cedula, ingreso, salud, educacion, vestimenta, vivienda, alimentacion } = req.body;
+  const datos = { cedula, ingreso, salud, educacion, vestimenta, vivienda, alimentacion };
 
   // Intenta leer el archivo JSON
   fs.readFile(filePath, 'utf8', (err, data) => {
@@ -66,6 +66,26 @@ app.get('/api/obtenerDatos', (req, res) => {
       let jsonData = [];
       if (data) {
         jsonData = JSON.parse(data);
+      }
+  
+      res.json(jsonData);
+    });
+  });
+  app.get('/api/facturas', (req, res) => {
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error al leer el archivo JSON:', err);
+        return res.status(500).send('Error en el servidor al leer el archivo JSON.');
+      }
+  
+      let jsonData = [];
+      if (data) {
+        try {
+          jsonData = JSON.parse(data);
+        } catch (parseErr) {
+          console.error('Error al parsear el archivo JSON:', parseErr);
+          return res.status(500).send('Error en el servidor al parsear el archivo JSON.');
+        }
       }
   
       res.json(jsonData);
