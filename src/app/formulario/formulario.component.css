@@ -6,3 +6,6 @@ body{
     max-width: 25em;
     margin: 1em auto;
    }
+.btn {
+    margin-top: 15px;
+}

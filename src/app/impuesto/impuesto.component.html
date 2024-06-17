@@ -1,41 +1,53 @@
 <form (ngSubmit)="enviarFactura()">
     <div class="form-group">
-      <h1 class="text-center text-primary">Facturas Gastos</h1>
+      <h1 class="text-center text-primary">Gastos Personales</h1>
   
-      <div class="input-group mb-3">
+      <div class="form-group">
         <label for="cedula" class="form-label">Cedula:</label>
-        <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="facturaDatos.cedula" >
+        <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="facturaDatos.cedula" required>
       </div>
   
-      <div class="input-group mb-3">
+      <div class="form-group">
         <label for="ingreso" class="form-label">Ingreso:</label>
-        <input type="text" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="facturaDatos.ingreso" >
+        <input type="text" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="facturaDatos.ingreso" required>
       </div>
       
-      <div class="input-group mb-3">
+      <div class="form-group">
        <label for="salud" class="form-label">Salud:</label>
-       <input type="text" class="form-control" id="salud" name="salud" [(ngModel)]="facturaDatos.salud" >
+       <input type="text" class="form-control" id="salud" name="salud" [(ngModel)]="facturaDatos.salud" required>
+       <span class="input-group-text">Límite: $3809.65</span>
+
      </div>
      
-     <div class="input-group mb-3">
+     <div class="form-group">
        <label for="educacion" class="form-label">Educación:</label>
-       <input type="text" class="form-control" id="educacion" name="educacion" [(ngModel)]="facturaDatos.educacion" >
+       <input type="text" class="form-control" id="educacion" name="educacion" [(ngModel)]="facturaDatos.educacion" required>
+       <span class="input-group-text">Límite: $3809.65</span>
      </div>
      
-     <div class="input-group mb-3">
+     <div class="form-group">
        <label for="vestimenta" class="form-label">Vestimenta:</label>
-       <input type="text" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="facturaDatos.vestimenta" >
+       <input type="text" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="facturaDatos.vestimenta" required>
+       <span class="input-group-text">Límite: $3809.65</span>
      </div>
  
-     <div class="input-group mb-3">
+     <div class="form-group">
        <label for="vivienda" class="form-label">Vivienda:</label>
-       <input type="text" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="facturaDatos.vivienda" >
+       <input type="text" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="facturaDatos.vivienda" required>
+       <span class="input-group-text">Límite: $3809.65</span>
      </div>
  
-     <div class="input-group mb-3">
+     <div class="form-group">
        <label for="alimentacion" class="form-label">Alimentación:</label>
-       <input type="text" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="facturaDatos.alimentacion" >
+       <input type="text" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="facturaDatos.alimentacion" required>
+       <span class="input-group-text">Límite: $3809.65</span>
      </div> 
+
+     <div class="form-group">
+      <label for="alimentacion" class="form-label">Total deducción por gastos personales: {{gastosTotales()}}</label>
+      <span class="input-group-text">Límite: $15238.60</span>
+    </div>
+    
       <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
   </form>

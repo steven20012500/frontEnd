@@ -7,6 +7,7 @@ import { GastoService } from '../gasto.service';
   styleUrl: './impuesto.component.css'
 })
 export class ImpuestoComponent {
+
   facturaDatos = {
     cedula: '',
     ingreso:'' ,
@@ -126,4 +127,15 @@ export class ImpuestoComponent {
     this.facturaDatos.IR = IR.toFixed(2);
     console.log("IR",IR);
   }
+
+  gastosTotales() : number{
+    const salud = parseFloat(this.facturaDatos.salud) || 0;
+    const educacion = parseFloat(this.facturaDatos.educacion) || 0;
+    const vestimenta = parseFloat(this.facturaDatos.vestimenta) || 0;
+    const vivienda = parseFloat(this.facturaDatos.vivienda) || 0;
+    const alimentacion = parseFloat(this.facturaDatos.alimentacion) || 0;
+    const gastosTotales = salud + educacion + vestimenta + vivienda + alimentacion;
+    return gastosTotales;
+  }
+  
 }

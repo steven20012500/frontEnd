@@ -2,26 +2,26 @@
    <div class="form-group">
      <h1 class="text-center text-primary">Facturas Gastos</h1>
  
-     <div class="input-group mb-3">
+     <div class="form-group">
        <label for="ruc" class="form-label">Ruc:</label>
-       <input type="text" class="form-control" id="ruc" name="ruc" [(ngModel)]="facturaDatos.ruc" >
+       <input type="text" class="form-control" id="ruc" name="ruc" [(ngModel)]="facturaDatos.ruc" required>
      </div>
  
-     <div class="input-group mb-3">
+     <div class="form-group">
        <label for="valor" class="form-label">Valor:</label>
-       <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="facturaDatos.valor" >
+       <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="facturaDatos.valor"  required>
      </div>
 
-     <div class="input-group">
+     <div class="form-group">
       <label for="gasto" class="form-label">Gasto:</label>
-      <select class="form-select" aria-label="gasto" name="gasto" [(ngModel)]="facturaDatos.gasto">
-      <option selected>Escoja el tipo de gasto</option>
-      <option value="Salud">Salud</option>
-      <option value="Vivienda">Vivienda</option>
-      <option value="Educacion">Educación</option>
-      <option value="Ninguno">Ninguno</option>
+      <select id="gasto" class="form-control" aria-label="Tipo de gasto" name="gasto" [(ngModel)]="facturaDatos.gasto" required>
+        <option value="" disabled selected>Escoja el tipo de gasto</option>
+        <option value="Salud">Salud</option>
+        <option value="Vivienda">Vivienda</option>
+        <option value="Educacion">Educación</option>
+        <option value="Ninguno">Ninguno</option>
       </select>
-      </div>
+    </div>    
 
      <button type="submit" class="btn btn-primary">Enviar</button>
    </div>
