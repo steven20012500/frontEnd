@@ -9,37 +9,37 @@
   
       <div class="form-group">
         <label for="ingreso" class="form-label">Ingreso:</label>
-        <input type="text" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="facturaDatos.ingreso" required>
+        <input type="number" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="facturaDatos.ingreso" min="0" required>
       </div>
       
       <div class="form-group">
        <label for="salud" class="form-label">Salud:</label>
-       <input type="text" class="form-control" id="salud" name="salud" [(ngModel)]="facturaDatos.salud" (ngModelChange)="validarGasto('salud')" required>
+       <input type="number" class="form-control" id="salud" name="salud" [(ngModel)]="facturaDatos.salud" (ngModelChange)="validarGasto('salud')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
 
      </div>
      
      <div class="form-group">
        <label for="educacion" class="form-label">Educación:</label>
-       <input type="text" class="form-control" id="educacion" name="educacion" [(ngModel)]="facturaDatos.educacion" (ngModelChange)="validarGasto('salud')" required>
+       <input type="number" class="form-control" id="educacion" name="educacion" [(ngModel)]="facturaDatos.educacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div>
      
      <div class="form-group">
        <label for="vestimenta" class="form-label">Vestimenta:</label>
-       <input type="text" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="facturaDatos.vestimenta" (ngModelChange)="validarGasto('vestimenta')" required>
+       <input type="number" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="facturaDatos.vestimenta" (ngModelChange)="validarGasto('vestimenta')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div>
  
      <div class="form-group">
        <label for="vivienda" class="form-label">Vivienda:</label>
-       <input type="text" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="facturaDatos.vivienda" (ngModelChange)="validarGasto('vivienda')" required>
+       <input type="number" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="facturaDatos.vivienda" (ngModelChange)="validarGasto('vivienda')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div>
  
      <div class="form-group">
        <label for="alimentacion" class="form-label">Alimentación:</label>
-       <input type="text" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="facturaDatos.alimentacion" (ngModelChange)="validarGasto('salud')" required>
+       <input type="number" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="facturaDatos.alimentacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div> 
 

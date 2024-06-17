@@ -14,7 +14,8 @@ export class FormularioComponent {
   constructor(private gastoService: GastoService) { }
 
   enviarFactura() {
-    if (this.facturaDatos.ruc && this.facturaDatos.valor && this.facturaDatos.gasto) {
+    if (this.facturaDatos.ruc &&  this.facturaDatos.valor !== '' && this.facturaDatos.valor !== null && this.facturaDatos.gasto) 
+      {
         //ejecutar impuestos
       this.gastoService.agregarFormulario(this.facturaDatos).subscribe({
         next: response => {

@@ -33,8 +33,13 @@ export class ImpuestoComponent {
   constructor(private gastoService: GastoService) { }
 
   enviarFactura() {
-    if (this.facturaDatos.cedula && this.facturaDatos.ingreso && this.facturaDatos.salud && this.facturaDatos.educacion
-      && this.facturaDatos.vestimenta && this.facturaDatos.vivienda && this.facturaDatos.alimentacion) {
+    if (this.facturaDatos.cedula && 
+      this.facturaDatos.ingreso !== '' && this.facturaDatos.ingreso !== null &&
+      this.facturaDatos.salud !== '' && this.facturaDatos.salud !== null &&
+      this.facturaDatos.educacion !== '' && this.facturaDatos.educacion !== null &&
+      this.facturaDatos.vestimenta !== '' && this.facturaDatos.vestimenta !== null &&
+      this.facturaDatos.vivienda !== '' && this.facturaDatos.vivienda !== null &&
+      this.facturaDatos.alimentacion !== '' && this.facturaDatos.alimentacion !== null)  {
         //ejecutar impuestos
         this.calculoImpuestos();
       this.gastoService.agregarFactura(this.facturaDatos).subscribe({
