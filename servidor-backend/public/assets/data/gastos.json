@@ -50,5 +50,18 @@
     "excedente": "12121091208.00",
     "valorExcedente": "4484803746.96",
     "IR": "4484827340.96"
+  },
+  {
+    "cedula": "172773536-5",
+    "ingreso": "20000",
+    "salud": "120",
+    "educacion": "457",
+    "vestimenta": "2001",
+    "vivienda": "3809.65",
+    "alimentacion": "3809.65",
+    "baseImponible": "9802.70",
+    "excedente": "9802.70",
+    "valorExcedente": "9802.70",
+    "IR": "9802.70"
   }
 ]

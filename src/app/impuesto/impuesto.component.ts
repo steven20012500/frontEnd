@@ -8,6 +8,15 @@ import { GastoService } from '../gasto.service';
 })
 export class ImpuestoComponent {
 
+  maximosGastos = {
+    salud: 3809.65,
+    educacion: 3809.65,
+    vestimenta: 3809.65,
+    vivienda: 3809.65,
+    alimentacion: 3809.65,
+    totalMaximo: 15238.60
+  };
+
   facturaDatos = {
     cedula: '',
     ingreso:'' ,
@@ -135,7 +144,41 @@ export class ImpuestoComponent {
     const vivienda = parseFloat(this.facturaDatos.vivienda) || 0;
     const alimentacion = parseFloat(this.facturaDatos.alimentacion) || 0;
     const gastosTotales = salud + educacion + vestimenta + vivienda + alimentacion;
+    const valorPorDefecto = 0;
+    if(gastosTotales >this.maximosGastos.totalMaximo ){
+      this.facturaDatos.alimentacion = valorPorDefecto.toFixed(2);
+      alert(`El valor máximo para los gastos es ${this.maximosGastos.totalMaximo}`);
+    }
     return gastosTotales;
   }
   
+  validarGasto(gasto: string) {
+    const salud = parseFloat(this.facturaDatos.salud) || 0;
+    const educacion = parseFloat(this.facturaDatos.educacion) || 0;
+    const vestimenta = parseFloat(this.facturaDatos.vestimenta) || 0;
+    const vivienda = parseFloat(this.facturaDatos.vivienda) || 0;
+    const alimentacion = parseFloat(this.facturaDatos.alimentacion) || 0;
+    const gastosTotales = salud + educacion + vestimenta + vivienda + alimentacion;
+
+    if (salud > this.maximosGastos.salud) {
+      this.facturaDatos.salud= this.maximosGastos.salud.toFixed(2);
+      alert(`El valor máximo para ${gasto} es ${this.maximosGastos.salud}`);
+    }
+    else if (educacion > this.maximosGastos.educacion) {
+      this.facturaDatos.educacion= this.maximosGastos.educacion.toFixed(2);
+      alert(`El valor máximo para ${gasto} es ${this.maximosGastos.educacion}`);
+    }
+    else if (vestimenta > this.maximosGastos.vestimenta) {
+      this.facturaDatos.vestimenta= this.maximosGastos.vestimenta.toFixed(2);
+      alert(`El valor máximo para ${gasto} es ${this.maximosGastos.vestimenta}`);
+    }
+    else if (vivienda > this.maximosGastos.vivienda) {
+      this.facturaDatos.vivienda= this.maximosGastos.vivienda.toFixed(2);
+      alert(`El valor máximo para ${gasto} es ${this.maximosGastos.vivienda}`);
+    }
+    else if (alimentacion > this.maximosGastos.alimentacion) {
+      this.facturaDatos.alimentacion= this.maximosGastos.alimentacion.toFixed(2);
+      alert(`El valor máximo para ${gasto} es ${this.maximosGastos.alimentacion}`);
+    }
+  }
 }
