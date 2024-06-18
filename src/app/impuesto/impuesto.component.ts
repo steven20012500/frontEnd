@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { GastoService } from '../gasto.service';
-
+import { Gasto } from '../gasto/gasto.component';
 @Component({
   selector: 'app-impuesto',
   templateUrl: './impuesto.component.html',
@@ -15,30 +15,25 @@ export class ImpuestoComponent {
     alimentacion: 3809.65,
     totalMaximo: 15238.60
   };
-
-  facturaDatos = {
+  facturaDatos: Gasto = {
     cedula: '',
-    ingreso:'' ,
-    salud:'',
-    educacion:'',
-    vestimenta:'',
-    vivienda:'',
-    alimentacion:'',
-    baseImponible: '',
-    excedente: '',
-    valorExcedente: '',
-    IR: ''
+    ingreso: 0,
+    salud: 0,
+    educacion: 0,
+    vestimenta: 0,
+    vivienda: 0,
+    alimentacion: 0,
+    baseImponible: 0,
+    excedente: 0,
+    valorExcedente: 0,
+    IR: 0
   };
+  
   constructor(private gastoService: GastoService) { }
-
   enviarFactura() {
-    if (this.facturaDatos.cedula && 
-      this.facturaDatos.ingreso !== '' && this.facturaDatos.ingreso !== null &&
-      this.facturaDatos.salud !== '' && this.facturaDatos.salud !== null &&
-      this.facturaDatos.educacion !== '' && this.facturaDatos.educacion !== null &&
-      this.facturaDatos.vestimenta !== '' && this.facturaDatos.vestimenta !== null &&
-      this.facturaDatos.vivienda !== '' && this.facturaDatos.vivienda !== null &&
-      this.facturaDatos.alimentacion !== '' && this.facturaDatos.alimentacion !== null)  {
+    if (this.facturaDatos.cedula && this.facturaDatos.ingreso !== null && this.facturaDatos.salud !== null &&
+     this.facturaDatos.educacion !== null && this.facturaDatos.vestimenta !== null &&
+      this.facturaDatos.vivienda !== null && this.facturaDatos.alimentacion !== null)  {
         //ejecutar impuestos
         this.calculoImpuestos();
       this.gastoService.agregarFactura(this.facturaDatos).subscribe({
@@ -47,16 +42,16 @@ export class ImpuestoComponent {
           // Resetea el formulario después de enviarlo
           this.facturaDatos = {
             cedula: '',
-            ingreso:'' ,
-            salud:'',
-            educacion:'',
-            vestimenta:'',
-            vivienda:'',
-            alimentacion:'',
-            baseImponible: '',
-            excedente: '',
-            valorExcedente: '',
-            IR: ''
+            ingreso: 0 ,
+            salud: 0,
+            educacion: 0,
+            vestimenta: 0,
+            vivienda: 0,
+            alimentacion: 0,
+            baseImponible: 0,
+            excedente: 0,
+            valorExcedente: 0,
+            IR: 0
           };
         },
         error: error => {
@@ -72,19 +67,19 @@ export class ImpuestoComponent {
 }
 
   calculoImpuestos()  {
-    const salud = parseFloat(this.facturaDatos.salud) || 0;
-    const educacion = parseFloat(this.facturaDatos.educacion) || 0;
-    const vestimenta = parseFloat(this.facturaDatos.vestimenta) || 0;
-    const vivienda = parseFloat(this.facturaDatos.vivienda) || 0;
-    const alimentacion = parseFloat(this.facturaDatos.alimentacion) || 0;
-    const ingreso = parseFloat(this.facturaDatos.ingreso) || 0;
+    const salud = this.facturaDatos.salud;
+    const educacion = this.facturaDatos.educacion;
+    const vestimenta = this.facturaDatos.vestimenta;
+    const vivienda = this.facturaDatos.vivienda;
+    const alimentacion = this.facturaDatos.alimentacion;
+    const ingreso = this.facturaDatos.ingreso;
     const totalGastos = salud + educacion + vestimenta + vivienda + alimentacion;
-    this.facturaDatos.baseImponible = (ingreso - totalGastos).toFixed(2);
-    let baseImponible = parseFloat(this.facturaDatos.baseImponible);
+    this.facturaDatos.baseImponible = (ingreso - totalGastos);
+    let baseImponible = this.facturaDatos.baseImponible;
     let IR = 0;
     let excedente= 0;
     let valorExcedente =0;
-    if(baseImponible <= 11722){
+    if( baseImponible <= 11722){
        excedente = baseImponible - 0;
        valorExcedente = excedente;
        IR = 0 +valorExcedente;  
@@ -135,54 +130,65 @@ export class ImpuestoComponent {
        valorExcedente = excedente * 0.37;
        IR = 23594 +valorExcedente;
     }
-    this.facturaDatos.excedente = excedente.toFixed(2);
-    this.facturaDatos.valorExcedente = valorExcedente.toFixed(2);
-    this.facturaDatos.IR = IR.toFixed(2);
+    this.facturaDatos.excedente = excedente;
+    this.facturaDatos.valorExcedente = valorExcedente;
+    this.facturaDatos.IR = IR;
     console.log("IR",IR);
   }
 
   gastosTotales() : number{
-    const salud = parseFloat(this.facturaDatos.salud) || 0;
-    const educacion = parseFloat(this.facturaDatos.educacion) || 0;
-    const vestimenta = parseFloat(this.facturaDatos.vestimenta) || 0;
-    const vivienda = parseFloat(this.facturaDatos.vivienda) || 0;
-    const alimentacion = parseFloat(this.facturaDatos.alimentacion) || 0;
-    const gastosTotales = salud + educacion + vestimenta + vivienda + alimentacion;
+    const salud = this.facturaDatos.salud;
+    const educacion = this.facturaDatos.educacion;
+    const vestimenta = this.facturaDatos.vestimenta;
+    const vivienda = this.facturaDatos.vivienda;
+    const alimentacion = this.facturaDatos.alimentacion;
     const valorPorDefecto = 0;
+    let gastosTotales = salud + educacion + vestimenta + vivienda + alimentacion;
+   
     if(gastosTotales >this.maximosGastos.totalMaximo ){
-      this.facturaDatos.alimentacion = valorPorDefecto.toFixed(2);
       alert(`El valor máximo para los gastos es ${this.maximosGastos.totalMaximo}`);
+      this.facturaDatos.alimentacion = valorPorDefecto;
     }
     return gastosTotales;
   }
+
   
   validarGasto(gasto: string) {
-    const salud = parseFloat(this.facturaDatos.salud) || 0;
-    const educacion = parseFloat(this.facturaDatos.educacion) || 0;
-    const vestimenta = parseFloat(this.facturaDatos.vestimenta) || 0;
-    const vivienda = parseFloat(this.facturaDatos.vivienda) || 0;
-    const alimentacion = parseFloat(this.facturaDatos.alimentacion) || 0;
-    const gastosTotales = salud + educacion + vestimenta + vivienda + alimentacion;
-
+    const salud = this.facturaDatos.salud;
+    const educacion = this.facturaDatos.educacion;
+    const vestimenta = this.facturaDatos.vestimenta;
+    const vivienda = this.facturaDatos.vivienda;
+    const alimentacion = this.facturaDatos.alimentacion;
+    const totalGastos = salud + educacion + vestimenta + vivienda + alimentacion;
+    if(totalGastos > this.facturaDatos.ingreso){
+      alert(`El valor total de los gastos es ${totalGastos}$ no puede superar los ingresos${this.facturaDatos.ingreso}$`);
+      this.facturaDatos.salud = 0;
+      this.facturaDatos.educacion = 0;
+      this.facturaDatos.vestimenta = 0;
+      this.facturaDatos.vivienda = 0;
+      this.facturaDatos.alimentacion = 0;
+    }
+    else{
     if (salud > this.maximosGastos.salud) {
-      this.facturaDatos.salud= this.maximosGastos.salud.toFixed(2);
+      this.facturaDatos.salud= this.maximosGastos.salud;
       alert(`El valor máximo para ${gasto} es ${this.maximosGastos.salud}`);
     }
     else if (educacion > this.maximosGastos.educacion) {
-      this.facturaDatos.educacion= this.maximosGastos.educacion.toFixed(2);
+      this.facturaDatos.educacion= this.maximosGastos.educacion;
       alert(`El valor máximo para ${gasto} es ${this.maximosGastos.educacion}`);
     }
     else if (vestimenta > this.maximosGastos.vestimenta) {
-      this.facturaDatos.vestimenta= this.maximosGastos.vestimenta.toFixed(2);
+      this.facturaDatos.vestimenta= this.maximosGastos.vestimenta;
       alert(`El valor máximo para ${gasto} es ${this.maximosGastos.vestimenta}`);
     }
     else if (vivienda > this.maximosGastos.vivienda) {
-      this.facturaDatos.vivienda= this.maximosGastos.vivienda.toFixed(2);
+      this.facturaDatos.vivienda= this.maximosGastos.vivienda;
       alert(`El valor máximo para ${gasto} es ${this.maximosGastos.vivienda}`);
     }
     else if (alimentacion > this.maximosGastos.alimentacion) {
-      this.facturaDatos.alimentacion= this.maximosGastos.alimentacion.toFixed(2);
+      this.facturaDatos.alimentacion= this.maximosGastos.alimentacion;
       alert(`El valor máximo para ${gasto} es ${this.maximosGastos.alimentacion}`);
     }
   }
+}
 }
