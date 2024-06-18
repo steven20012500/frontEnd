@@ -12,6 +12,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { ImpuestoComponent } from './impuesto/impuesto.component';
 import { GastoComponent } from './gasto/gasto.component';
 import { ReporteComponent } from './reporte/reporte.component';
+import { ReporteFormularioComponent } from './reporte-formulario/reporte-formulario.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { ReporteComponent } from './reporte/reporte.component';
     FormularioComponent,
     ImpuestoComponent,
     GastoComponent,
-    ReporteComponent
+    ReporteComponent,
+    ReporteFormularioComponent
     ],
   imports: [
     BrowserModule,
