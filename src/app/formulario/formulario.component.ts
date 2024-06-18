@@ -12,7 +12,6 @@ export class FormularioComponent {
     gasto:'',
   };
   constructor(private gastoService: GastoService) { }
-
   enviarFactura() {
     if (this.facturaDatos.ruc &&  this.facturaDatos.valor !== '' && this.facturaDatos.valor !== null && this.facturaDatos.gasto) 
       {

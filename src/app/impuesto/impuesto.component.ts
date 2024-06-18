@@ -7,7 +7,6 @@ import { GastoService } from '../gasto.service';
   styleUrl: './impuesto.component.css'
 })
 export class ImpuestoComponent {
-
   maximosGastos = {
     salud: 3809.65,
     educacion: 3809.65,

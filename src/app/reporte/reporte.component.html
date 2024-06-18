@@ -1,0 +1,35 @@
+<div class="container">
+    REPORTE DE PAGO IMPUESTO RENTA
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Cedula</th>
+                <th scope="col">Ingreso</th>
+                <th scope="col">Salud</th>
+                <th scope="col">Educacion</th>
+                <th scope="col">vestimenta</th>
+                <th scope="col">vivienda</th>
+                <th scope="col">alimentacion</th>
+                <th scope="col">Base Imponible</th>
+                <th scope="col">Excedente</th>
+                <th scope="col">Valor Excedente</th>
+                <th scope="col">Impuesto a la renta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let gasto of gastos">
+                <th scope="row">{{gasto.cedula}}</th>
+                <td>{{gasto.ingreso}}</td>
+                <td>{{gasto.salud}}</td>
+                <td>{{gasto.educacion}}</td>
+                <td>{{gasto.vestimenta}}</td>
+                <td>{{gasto.vivienda}}</td>
+                <td>{{gasto.alimentacion}}</td>
+                <td>{{gasto.baseImponible}}</td>
+                <td>{{gasto.excedente}}</td>
+                <td>{{gasto.valorExcedente}}</td>
+                <td>{{gasto.IR}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

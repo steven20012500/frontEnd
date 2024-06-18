@@ -4,6 +4,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { ImpuestoComponent } from './impuesto/impuesto.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { GaleriaComponent } from './galeria/galeria.component';
+import { ReporteComponent } from './reporte/reporte.component';
 
 
 const routes: Routes = [
@@ -11,8 +12,8 @@ const routes: Routes = [
   { path: 'impuesto', component: ImpuestoComponent },
   { path: 'informacion', component: InformacionComponent },
   { path: 'galeria', component: GaleriaComponent },
+  { path: 'reporte', component: ReporteComponent },
   { path: '', redirectTo: '/galeria', pathMatch: 'full' } // Redirige al informacion por defecto
-
 ];
 
 @NgModule({

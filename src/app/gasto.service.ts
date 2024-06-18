@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Gasto } from './gasto/gasto.component';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,6 @@ export class GastoService {
     return this.http.post<any>(this.apiUrl2, datos);
   }
   obtenerDatos(): Observable<any>{
-    return this.http.get<any>(this.apiUrl1);
+    return this.http.get<Gasto[]>(this.apiUrl1);
   }
 }
