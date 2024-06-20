@@ -73,7 +73,7 @@ app.get('/api/obtenerDatos', (req, res) => {
     });
   });
   app.get('/api/facturas', (req, res) => {
-    fs.readFile(filePath, 'utf8', (err, data) => {
+    fs.readFile(filePath2, 'utf8', (err, data) => {
       if (err) {
         console.error('Error al leer el archivo JSON:', err);
         return res.status(500).send('Error en el servidor al leer el archivo JSON.');
@@ -128,3 +128,5 @@ app.get('/api/obtenerDatos', (req, res) => {
       });
     });
   });
+  //api obtener facutras SRI
+  

@@ -24,5 +24,18 @@
     "excedente": 1070,
     "valorExcedente": 107,
     "IR": 267
+  },
+  {
+    "cedula": "1523125486",
+    "ingreso": 20000,
+    "salud": 1000,
+    "educacion": 1000,
+    "vestimenta": 500,
+    "vivienda": 500,
+    "alimentacion": 100,
+    "baseImponible": 16900,
+    "excedente": 1970,
+    "valorExcedente": 197,
+    "IR": 357
   }
 ]

@@ -21,3 +21,9 @@ export interface Gasto{
   "valorExcedente": number,
   "IR": number
 }
+
+export interface Formulario{
+  "ruc": string,
+  "valor": number,
+  "gasto": string
+}
