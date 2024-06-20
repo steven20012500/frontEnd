@@ -6,6 +6,7 @@ import { InformacionComponent } from './informacion/informacion.component';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { ReporteComponent } from './reporte/reporte.component';
 import { ReporteFormularioComponent } from './reporte-formulario/reporte-formulario.component';
+import { UserReporteComponent } from './user-reporte/user-reporte.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'galeria', component: GaleriaComponent },
   { path: 'reporte', component: ReporteComponent },
   { path: 'reporte-formulario', component: ReporteFormularioComponent },
+  { path: 'user-reporte', component: UserReporteComponent },
 
   { path: '', redirectTo: '/galeria', pathMatch: 'full' } // Redirige al informacion por defecto
 ];

@@ -13,6 +13,8 @@ import { ImpuestoComponent } from './impuesto/impuesto.component';
 import { GastoComponent } from './gasto/gasto.component';
 import { ReporteComponent } from './reporte/reporte.component';
 import { ReporteFormularioComponent } from './reporte-formulario/reporte-formulario.component';
+import { UsersComponent } from './users/users.component';
+import { UserReporteComponent } from './user-reporte/user-reporte.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { ReporteFormularioComponent } from './reporte-formulario/reporte-formula
     ImpuestoComponent,
     GastoComponent,
     ReporteComponent,
-    ReporteFormularioComponent
+    ReporteFormularioComponent,
+    UsersComponent,
+    UserReporteComponent
     ],
   imports: [
     BrowserModule,
