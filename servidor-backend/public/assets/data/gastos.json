@@ -37,5 +37,18 @@
     "excedente": 1970,
     "valorExcedente": 197,
     "IR": 357
+  },
+  {
+    "cedula": "1727735365-20",
+    "ingreso": 20000,
+    "salud": 2000,
+    "educacion": 1000,
+    "vestimenta": 1000,
+    "vivienda": 0,
+    "alimentacion": 0,
+    "baseImponible": 16000,
+    "excedente": 1070,
+    "valorExcedente": 107,
+    "IR": 267
   }
 ]

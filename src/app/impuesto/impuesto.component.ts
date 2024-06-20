@@ -83,8 +83,8 @@ export class ImpuestoComponent {
     let valorExcedente =0;
     if( baseImponible <= 11722){
        excedente = baseImponible - 0;
-       valorExcedente = excedente;
-       IR = 0 +valorExcedente;  
+       valorExcedente = excedente * 0.0;
+       IR = 0 + valorExcedente;  
     } 
     else if(baseImponible>11722 && baseImponible<=14930){
        excedente = baseImponible - 11722;
