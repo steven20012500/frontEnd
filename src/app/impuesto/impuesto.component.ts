@@ -28,7 +28,9 @@ export class ImpuestoComponent {
     valorExcedente: 0,
     IR: 0
   };
-  
+  onInit(){
+    this.calculoImpuestos();
+  }
   constructor(private gastoService: GastoService) { }
   enviarFactura() {
     if (this.facturaDatos.cedula && this.facturaDatos.ingreso !== null && this.facturaDatos.salud !== null &&
@@ -151,7 +153,6 @@ export class ImpuestoComponent {
     }
     return gastosTotales;
   }
-
   
   validarGasto(gasto: string) {
     const salud = this.facturaDatos.salud;

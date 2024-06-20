@@ -51,4 +51,12 @@
       <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
   </form>
+
+  <div class="mt-5">
+    <label for="alimentacion" class="form-label">Detalle Impuesto: {{calculoImpuestos()}}</label>
+    <span class="input-group-text">Base Imponible: {{ facturaDatos.baseImponible }}</span>
+      <span class="input-group-text">Excedente: {{ facturaDatos.excedente }}</span>
+        <span class="input-group-text">Porcentaje Excedente: {{ facturaDatos.valorExcedente }}</span>
+          <span class="input-group-text">Impuesto a la renta: {{ facturaDatos.IR}}</span>
+  </div>
   
