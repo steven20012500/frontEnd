@@ -1,7 +1,8 @@
-
-<div class="banner">
+<div class="container">
+  <div class="banner">
     <img src="/assets/banner.jpeg" class="banner-img" alt="Banner">
   </div>
+
   <div class="description text-center">
     <h2>Descripción de la Aplicación Web</h2>
     <p>
@@ -10,18 +11,18 @@
       Además, ofrece información adicional sobre cada tipo de gasto para ayudarte a tomar decisiones informadas.
     </p>
   </div>
-<ul>
-    <li *ngFor="let deducible of deducibles">
-   <div class="card" style="width: 80rem;">
-    <img src="{{deducible.imagen}}" class="card-img-top" alt="personas">
-    <div class="card-body">
-    <h5 class="card-title">{{deducible.gasto}}</h5>
-    <p class="card-text">{{deducible.descripcion}} <b>{{deducible.gasto}}</b></p>
-    <button (click)="informacion(deducible.informacionAdicional)" class="btn btn-info">Información</button>
-    <button (click)="borrarDeducible(deducible)" class="btn btn-warning">Borrar</button>
-    </div>
-    </div>
- 
-   </li>
-   
-   </ul>
+
+  <ul class="list-unstyled mt-4">
+    <li *ngFor="let deducible of deducibles" class="mb-3">
+      <div class="card">
+        <img [src]="deducible.imagen" class="card-img-top" alt="Imagen de {{ deducible.gasto }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ deducible.gasto }}</h5>
+          <p class="card-text">{{ deducible.descripcion }}</p>
+          <button (click)="informacion(deducible.informacionAdicional)" class="btn btn-info">Información</button>
+          <button (click)="borrarDeducible(deducible)" class="btn btn-warning ms-2">Borrar</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

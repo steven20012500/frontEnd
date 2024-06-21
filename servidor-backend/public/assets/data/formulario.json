@@ -13,5 +13,10 @@
     "ruc": "1149878",
     "valor": 2000,
     "gasto": "Salud"
+  },
+  {
+    "ruc": "554243234",
+    "valor": 5,
+    "gasto": "Vivienda"
   }
 ]

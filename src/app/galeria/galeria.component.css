@@ -1,54 +1,15 @@
-/* Estilos para el banner */
-.banner {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 20px; /* Añadir un margen inferior para separar el banner del contenido */
-    margin-top: 1px;
-  }
-  
-  .banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente para llenar el contenedor */
-    max-height: 300px; /* Limita la altura máxima del banner para evitar que ocupe demasiado espacio */
-  }
-  
-  /* Estilos para las tarjetas */
-  .card {
-    margin-bottom: 20px; /* Añadir un margen inferior para separar las tarjetas entre sí */
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente para llenar el contenedor */
-    max-height: 200px; /* Limita la altura máxima de la imagen en la tarjeta */
-    border-bottom: 2px solid #ddd; /* Añadir un borde inferior para mejor separación */
-  }
-  
-  /* Filtros de color para las imágenes (opcional) */
-  .card-img-top {
-    filter: brightness(0.9) contrast(1.1); /* Ajusta el brillo y contraste */
-    transition: all 0.3s ease-in-out; /* Suaviza la transición al hacer hover */
-  }
-  
-  .card-img-top:hover {
-    filter: brightness(1.1) contrast(1.2); /* Efecto al hacer hover */
-  }
-  
-  /* Responsive design */
-  @media (max-width: 992px) {
-    .card {
-      width: 100%; /* Asegura que la tarjeta ocupe el ancho completo en pantallas más pequeñas */
-    }
-  
-    .banner-img {
-      max-height: 200px; /* Ajustar la altura máxima del banner en pantallas más pequeñas */
-    }
-  
-    .card-img-top {
-      max-height: 150px; /* Ajustar la altura máxima de la imagen en las tarjetas en pantallas más pequeñas */
-    }
-  }
-  
+.custom-link {
+  font-weight: bold; /* Añade negrita para destacar */
+  color: #ffffff; /* Texto blanco */
+}
+
+.custom-link:hover {
+  color: #ffffff; /* Cambia el color al pasar el mouse */
+  text-decoration: none; /* Quita la subrayado al pasar el mouse */
+}
+
+.custom-link.router-link-active {
+  background-color: rgba(255, 255, 255, 0.1); /* Color de fondo cuando está activo */
+  border-radius: 5px; /* Añade bordes redondeados */
+  padding: 5px 10px; /* Añade espacio alrededor del texto */
+}

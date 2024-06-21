@@ -8,7 +8,7 @@ import { Gasto } from '../gasto/gasto.component';
 })
 export class ImpuestoComponent {
   maximosGastos = {
-    salud: 3809.65,
+    salud: 15238.60,
     educacion: 3809.65,
     vestimenta: 3809.65,
     vivienda: 3809.65,
@@ -150,6 +150,7 @@ export class ImpuestoComponent {
     if(gastosTotales >this.maximosGastos.totalMaximo ){
       alert(`El valor máximo para los gastos es ${this.maximosGastos.totalMaximo}`);
       this.facturaDatos.alimentacion = valorPorDefecto;
+      this.facturaDatos.salud = valorPorDefecto;
     }
     return gastosTotales;
   }
