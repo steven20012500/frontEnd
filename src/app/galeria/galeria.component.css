@@ -13,3 +13,43 @@
   border-radius: 5px; /* Añade bordes redondeados */
   padding: 5px 10px; /* Añade espacio alrededor del texto */
 }
+.btn.btn-info {
+  background-color: #007bff; /* Color de fondo del botón (azul) */
+  color: #030303; /* Color del texto (blanco) */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño de fuente del texto */
+  cursor: pointer; /* Cursor de mano al pasar por el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.btn.btn-info:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el ratón por encima */
+}
+
+.btn.btn-info:active {
+  background-color: #004494; /* Color de fondo al hacer clic */
+}
+
+.btn.btn-info:focus {
+  outline: none; /* Sin borde al enfocar */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Sombra de enfoque */
+}
+
+img{
+  width: 1000px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-img{
+  margin-top: 10px;
+  width: 1050px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

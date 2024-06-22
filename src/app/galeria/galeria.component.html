@@ -1,6 +1,6 @@
 <div class="container">
   <div class="banner">
-    <img src="/assets/banner.jpeg" class="banner-img" alt="Banner">
+    <img src="/assets/banner2.jpg" class="banner-img" alt="Banner">
   </div>
 
   <div class="description text-center">
@@ -17,7 +17,7 @@
       <div class="card">
         <img [src]="deducible.imagen" class="card-img-top" alt="Imagen de {{ deducible.gasto }}">
         <div class="card-body">
-          <h5 class="card-title">{{ deducible.gasto }}</h5>
+          <h3 class="card-title"> {{ deducible.gasto }}</h3>
           <p class="card-text">{{ deducible.descripcion }}</p>
           <button (click)="informacion(deducible.informacionAdicional)" class="btn btn-info">Información</button>
           <button (click)="borrarDeducible(deducible)" class="btn btn-warning ms-2">Borrar</button>

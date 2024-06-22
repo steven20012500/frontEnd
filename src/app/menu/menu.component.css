@@ -1,7 +1,74 @@
 .custom-info-link {
-    font-weight: bold; /* Añade negrita para hacerlo más prominente */
-    font-size: 1.2rem; /* Cambia el tamaño del texto */
-    color: #fff; /* Cambia el color del texto a blanco */
-    /* Otros estilos según sea necesario */
-  }
-  
+  font-weight: bold; /* Añade negrita para hacerlo más prominente */
+  font-size: 1.2rem; /* Cambia el tamaño del texto */
+  color: #fff; /* Cambia el color del texto a blanco */
+  text-decoration: none; /* Elimina la subrayado del texto */
+  padding: 10px 15px; /* Añade padding para mejorar la usabilidad */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.custom-info-link:hover {
+  background-color: #1b89e2; /* Color de fondo al pasar el ratón por encima */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.custom-info-link:active {
+  background-color: #1b89e2; /* Color de fondo al hacer clic */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.custom-info-link:focus {
+  outline: none; /* Sin borde al enfocar */
+  box-shadow: 0 0 0 3px rgba(2, 121, 248, 0.822); /* Sombra de enfoque */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Cambia el tamaño del texto */
+  font-weight: bold; /* Añade negrita para hacerlo más prominente */
+  color: #fff; /* Cambia el color del texto a blanco */
+  text-decoration: none; /* Elimina la subrayado del texto */
+  padding: 10px 15px; /* Añade padding para mejorar la usabilidad */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.navbar-brand:hover {
+  background-color: #1b89e2; /* Color de fondo al pasar el ratón por encima */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.navbar-brand:active {
+  background-color: #1b89e2; /* Color de fondo al hacer clic */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.navbar-brand:focus {
+  outline: none; /* Sin borde al enfocar */
+  box-shadow: 0 0 0 3px rgba(2, 121, 248, 0.822); /* Sombra de enfoque */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.nav-item {
+  font-size: 1.2rem; /* Cambia el tamaño del texto */
+  font-weight: bold; /* Añade negrita para hacerlo más prominente */
+  color: #fff; /* Cambia el color del texto a blanco */
+  text-decoration: none; /* Elimina la subrayado del texto */
+  padding: 10px 15px; /* Añade padding para mejorar la usabilidad */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.nav-item:hover {
+  background-color: #1b89e2; /* Color de fondo al pasar el ratón por encima */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.nav-item:active {
+  background-color: #1b89e2; /* Color de fondo al hacer clic */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.nav-item:focus {
+  outline: none; /* Sin borde al enfocar */
+  box-shadow: 0 0 0 3px rgba(2, 121, 248, 0.822); /* Sombra de enfoque */
+  color: #fff; /* Asegura que el texto siga siendo blanco */
+}

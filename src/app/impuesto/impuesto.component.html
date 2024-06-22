@@ -44,7 +44,7 @@
      </div> 
 
      <div class="form-group">
-      <label for="alimentacion" class="form-label">Total deducción por gastos personales: {{gastosTotales()}}</label>
+      <h2>Total deducción por gastos personales: {{gastosTotales()}}</h2>
       <span class="input-group-text">Límite: $15238.60</span>
     </div>
     
@@ -53,7 +53,7 @@
   </form>
 
   <div class="mt-5">
-    <label for="alimentacion" class="form-label">Detalle Impuesto: {{calculoImpuestos()}}</label>
+    <h3>Detalle Impuesto: {{calculoImpuestos()}}</h3>
     <span class="input-group-text">Base Imponible: {{ facturaDatos.baseImponible }}</span>
       <span class="input-group-text">Excedente: {{ facturaDatos.excedente }}</span>
         <span class="input-group-text">Porcentaje Excedente: {{ facturaDatos.valorExcedente }}</span>
