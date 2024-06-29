@@ -15,6 +15,8 @@ import { ReporteComponent } from './reporte/reporte.component';
 import { ReporteFormularioComponent } from './reporte-formulario/reporte-formulario.component';
 import { UsersComponent } from './users/users.component';
 import { UserReporteComponent } from './user-reporte/user-reporte.component';
+import { IngresarUsuariosComponent } from './ingresar-usuarios/ingresar-usuarios.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { UserReporteComponent } from './user-reporte/user-reporte.component';
     ReporteComponent,
     ReporteFormularioComponent,
     UsersComponent,
-    UserReporteComponent
+    UserReporteComponent,
+    IngresarUsuariosComponent,
+    LoginComponent
     ],
   imports: [
     BrowserModule,

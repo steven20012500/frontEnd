@@ -7,6 +7,8 @@ import { GaleriaComponent } from './galeria/galeria.component';
 import { ReporteComponent } from './reporte/reporte.component';
 import { ReporteFormularioComponent } from './reporte-formulario/reporte-formulario.component';
 import { UserReporteComponent } from './user-reporte/user-reporte.component';
+import { IngresarUsuariosComponent } from './ingresar-usuarios/ingresar-usuarios.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,9 @@ const routes: Routes = [
   { path: 'reporte', component: ReporteComponent },
   { path: 'reporte-formulario', component: ReporteFormularioComponent },
   { path: 'user-reporte', component: UserReporteComponent },
+  { path: 'ingresarUser', component: IngresarUsuariosComponent },
+  { path: 'login', component: LoginComponent },
+
 
   { path: '', redirectTo: '/galeria', pathMatch: 'full' } // Redirige al informacion por defecto
 ];
