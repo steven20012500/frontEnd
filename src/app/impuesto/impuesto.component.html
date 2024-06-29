@@ -1,45 +1,40 @@
-<form (ngSubmit)="enviarFactura()">
+<form (ngSubmit)="enviarImpuestos()">
     <div class="form-group">
       <h1 class="text-center text-primary">Gastos Personales</h1>
-  
-      <div class="form-group">
-        <label for="cedula" class="form-label">Cedula:</label>
-        <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="facturaDatos.cedula" required>
-      </div>
-  
+
       <div class="form-group">
         <label for="ingreso" class="form-label">Ingreso:</label>
-        <input type="number" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="facturaDatos.ingreso" min="0" required>
+        <input type="number" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="impuestos.ingreso" min="0" required>
       </div>
       
       <div class="form-group">
        <label for="salud" class="form-label">Salud:</label>
-       <input type="number" class="form-control" id="salud" name="salud" [(ngModel)]="facturaDatos.salud" (ngModelChange)="validarGasto('salud')"  min="0" required>
+       <input type="number" class="form-control" id="salud" name="salud" [(ngModel)]="impuestos.salud" (ngModelChange)="validarGasto('salud')"  min="0" required>
        <span class="input-group-text">Límite: $15238.65</span>
 
      </div>
      
      <div class="form-group">
        <label for="educacion" class="form-label">Educación:</label>
-       <input type="number" class="form-control" id="educacion" name="educacion" [(ngModel)]="facturaDatos.educacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
+       <input type="number" class="form-control" id="educacion" name="educacion" [(ngModel)]="impuestos.educacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div>
      
      <div class="form-group">
        <label for="vestimenta" class="form-label">Vestimenta:</label>
-       <input type="number" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="facturaDatos.vestimenta" (ngModelChange)="validarGasto('vestimenta')"  min="0" required>
+       <input type="number" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="impuestos.vestimenta" (ngModelChange)="validarGasto('vestimenta')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div>
  
      <div class="form-group">
        <label for="vivienda" class="form-label">Vivienda:</label>
-       <input type="number" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="facturaDatos.vivienda" (ngModelChange)="validarGasto('vivienda')"  min="0" required>
+       <input type="number" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="impuestos.vivienda" (ngModelChange)="validarGasto('vivienda')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div>
  
      <div class="form-group">
        <label for="alimentacion" class="form-label">Alimentación:</label>
-       <input type="number" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="facturaDatos.alimentacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
+       <input type="number" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="impuestos.alimentacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
        <span class="input-group-text">Límite: $3809.65</span>
      </div> 
 
@@ -54,9 +49,9 @@
 
   <div class="mt-5">
     <h3>Detalle Impuesto: {{calculoImpuestos()}}</h3>
-    <span class="input-group-text">Base Imponible: {{ facturaDatos.baseImponible }}</span>
-      <span class="input-group-text">Excedente: {{ facturaDatos.excedente }}</span>
-        <span class="input-group-text">Porcentaje Excedente: {{ facturaDatos.valorExcedente }}</span>
-          <span class="input-group-text">Impuesto a la renta: {{ facturaDatos.IR}}</span>
+    <span class="input-group-text">Base Imponible: {{ impuestos.baseImponible }}</span>
+      <span class="input-group-text">Excedente: {{ impuestos.excedente }}</span>
+        <span class="input-group-text">Porcentaje Excedente: {{ impuestos.valorExcedente }}</span>
+          <span class="input-group-text">Impuesto a la renta: {{ impuestos.IR}}</span>
   </div>
   

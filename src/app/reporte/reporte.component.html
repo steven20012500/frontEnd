@@ -3,7 +3,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Cedula</th>
                 <th scope="col">Ingreso</th>
                 <th scope="col">Salud</th>
                 <th scope="col">Educacion</th>
@@ -18,7 +17,6 @@
         </thead>
         <tbody>
             <tr *ngFor="let gasto of gastos">
-                <th scope="row">{{gasto.cedula}}</th>
                 <td>{{gasto.ingreso}}</td>
                 <td>{{gasto.salud}}</td>
                 <td>{{gasto.educacion}}</td>
