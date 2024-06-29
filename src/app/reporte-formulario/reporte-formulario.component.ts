@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Formulario, Gasto } from '../gasto/gasto.component';
-import { GastoService } from '../gasto.service';
+import { GastoService } from '../services/gasto.service';
 
 @Component({
   selector: 'app-reporte-formulario',

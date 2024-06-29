@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
-import { Formulario} from './gasto/gasto.component';
-import { Gasto } from './gasto';
+import { Formulario} from '../gasto/gasto.component';
+import { Gasto } from '../class/gasto';
 
 @Injectable({
   providedIn: 'root'

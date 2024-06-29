@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GastoService } from '../gasto.service';
-import { StorageService } from '../storage.service';
-import { Gasto } from '../gasto';
+import { GastoService } from '../services/gasto.service';
+import { StorageService } from '../services/storage.service';
+import { Gasto } from '../class/gasto';
 
 @Component({
   selector: 'app-impuesto',

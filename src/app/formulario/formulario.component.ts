@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GastoService } from '../gasto.service';
+import { GastoService } from '../services/gasto.service';
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',

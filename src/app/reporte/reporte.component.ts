@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GastoService} from '../gasto.service';
-import { Gasto } from '../gasto';
+import { GastoService} from '../services/gasto.service';
+import { Gasto } from '../class/gasto';
 @Component({
   selector: 'app-reporte',
   templateUrl: './reporte.component.html',
