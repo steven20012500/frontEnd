@@ -80,5 +80,4 @@ usersController.obtenerCedulaPorId = async (req, res) => {
         res.status(500).send('Error al obtener la cédula del usuario');
     }
 };
-
 module.exports = usersController;
