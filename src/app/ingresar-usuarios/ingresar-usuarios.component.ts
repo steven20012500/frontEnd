@@ -9,6 +9,7 @@ import { User } from '../class/user';
 })
 export class IngresarUsuariosComponent {
   usuarios: User = {
+    _id: '',
     cedula: '',
     password: '',
  };
@@ -19,6 +20,7 @@ export class IngresarUsuariosComponent {
        next: response => {
          console.log('Usuario enviado', response);
          this.usuarios = {
+          _id: '',
           cedula: '',
           password: '',
        };

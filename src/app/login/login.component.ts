@@ -11,6 +11,7 @@ import { User } from '../class/user';
 })
 export class LoginComponent {
   usuarios: User = {
+    _id: '',
     cedula: '',
     password: '',
   };

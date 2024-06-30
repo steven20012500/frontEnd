@@ -24,6 +24,9 @@ export class ImpuestoComponent implements OnInit {
   };
 
   impuestos: Gasto = {
+    _id: '',
+    user: '',
+    cedula: '',
     ingreso: 0,
     salud: 0,
     educacion: 0,
@@ -172,6 +175,9 @@ export class ImpuestoComponent implements OnInit {
 
   private resetForm() {
     this.impuestos = {
+      _id: '',
+      user: '',
+      cedula: '',
       ingreso: 0,
       salud: 0,
       educacion: 0,

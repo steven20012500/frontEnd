@@ -65,4 +65,20 @@ usersController.getTasks = async (req, res) =>
 ]) 
 }
 
+usersController.obtenerCedulaPorId = async (req, res) => {
+    try {
+        const userId = req.headers['user-id']; // Leer userId desde los encabezados
+        const user = await User.findById(userId);
+
+        if (!user) {
+            return res.status(404).json({ message: 'Usuario no encontrado' });
+        }
+
+        res.status(200).json({ cedula: user.cedula });
+    } catch (error) {
+        console.error('Error al obtener la cédula del usuario:', error);
+        res.status(500).send('Error al obtener la cédula del usuario');
+    }
+};
+
 module.exports = usersController;

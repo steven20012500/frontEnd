@@ -1,33 +1,33 @@
-<div class="container">
-    REPORTE DE PAGO IMPUESTO RENTA
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Ingreso</th>
-                <th scope="col">Salud</th>
-                <th scope="col">Educacion</th>
-                <th scope="col">vestimenta</th>
-                <th scope="col">vivienda</th>
-                <th scope="col">alimentacion</th>
-                <th scope="col">Base Imponible</th>
-                <th scope="col">Excedente</th>
-                <th scope="col">Valor Excedente</th>
-                <th scope="col">Impuesto a la renta</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let gasto of gastos">
-                <td>{{gasto.ingreso}}</td>
-                <td>{{gasto.salud}}</td>
-                <td>{{gasto.educacion}}</td>
-                <td>{{gasto.vestimenta}}</td>
-                <td>{{gasto.vivienda}}</td>
-                <td>{{gasto.alimentacion}}</td>
-                <td>{{gasto.baseImponible}}</td>
-                <td>{{gasto.excedente}}</td>
-                <td>{{gasto.valorExcedente}}</td>
-                <td>{{gasto.IR}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table class="min-w-full divide-y divide-gray-200">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cédula</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ingreso</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Salud</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Educación</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vestimenta</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vivienda</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Alimentación</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Base Imponible</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Excedente</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor Excedente</th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">IR</th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+      <tr *ngFor="let item of gastos">
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ item.cedula }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.ingreso }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.salud }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.educacion }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.vestimenta }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.vivienda }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.alimentacion }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.baseImponible }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.excedente }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.valorExcedente }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.gasto.IR }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

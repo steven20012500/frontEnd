@@ -46,4 +46,6 @@ impuestosController.addImpuesto = async (req, res) => {
     }
 }
 
+
+
 module.exports = impuestosController;
