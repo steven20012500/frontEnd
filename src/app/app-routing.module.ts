@@ -10,6 +10,7 @@ import { UserReporteComponent } from './user-reporte/user-reporte.component';
 import { IngresarUsuariosComponent } from './ingresar-usuarios/ingresar-usuarios.component';
 import { LoginComponent } from './login/login.component';
 import { authGuard } from './guards/auth.guard';
+import { EmpleadoComponent } from './empleado/empleado.component';
 
 const routes: Routes = [
   { path: 'formulario', component: FormularioComponent },
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'reporte-formulario', component: ReporteFormularioComponent },
   { path: 'user-reporte', component: UserReporteComponent },
   { path: 'ingresarUser', component: IngresarUsuariosComponent, canActivate : [authGuard] },
+  { path: 'registroEmpleado', component: EmpleadoComponent },
+
   { path: 'login', component: LoginComponent },
 
 

@@ -17,6 +17,7 @@ import { UsersComponent } from './users/users.component';
 import { UserReporteComponent } from './user-reporte/user-reporte.component';
 import { IngresarUsuariosComponent } from './ingresar-usuarios/ingresar-usuarios.component';
 import { LoginComponent } from './login/login.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { LoginComponent } from './login/login.component';
     UsersComponent,
     UserReporteComponent,
     IngresarUsuariosComponent,
-    LoginComponent
+    LoginComponent,
+    EmpleadoComponent
     ],
   imports: [
     BrowserModule,
