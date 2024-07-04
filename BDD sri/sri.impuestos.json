@@ -1,0 +1,150 @@
+[{
+  "_id": {
+    "$oid": "6686be38dc8c1d026ebfac30"
+  },
+  "user": {
+    "$oid": "6686bdc1dc8c1d026ebfac26"
+  },
+  "ingreso": 150000,
+  "salud": 15238.6,
+  "educacion": 0,
+  "vestimenta": 0,
+  "vivienda": 0,
+  "alimentacion": 0,
+  "baseImponible": 134761.4,
+  "excedente": 29181.399999999994,
+  "valorExcedente": 10797.117999999999,
+  "IR": 34391.118,
+  "createdAt": {
+    "$date": "2024-07-04T15:22:32.422Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T15:22:32.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686bf99dc8c1d026ebfac3d"
+  },
+  "user": {
+    "$oid": "6686bf5adc8c1d026ebfac38"
+  },
+  "ingreso": 15000,
+  "salud": 0,
+  "educacion": 0,
+  "vestimenta": 0,
+  "vivienda": 0,
+  "alimentacion": 0,
+  "baseImponible": 15000,
+  "excedente": 70,
+  "valorExcedente": 7,
+  "IR": 167,
+  "createdAt": {
+    "$date": "2024-07-04T15:28:25.932Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T15:28:25.932Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686c126dc8c1d026ebfac4b"
+  },
+  "user": {
+    "$oid": "6686bf5adc8c1d026ebfac38"
+  },
+  "ingreso": 15000,
+  "salud": 10,
+  "educacion": 1000,
+  "vestimenta": 0,
+  "vivienda": 0,
+  "alimentacion": 0,
+  "baseImponible": 13990,
+  "excedente": 2268,
+  "valorExcedente": 113.4,
+  "IR": 113.4,
+  "createdAt": {
+    "$date": "2024-07-04T15:35:02.165Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T15:35:02.165Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686c13adc8c1d026ebfac71"
+  },
+  "user": {
+    "$oid": "6686bf5adc8c1d026ebfac38"
+  },
+  "ingreso": 50000,
+  "salud": 0,
+  "educacion": 0,
+  "vestimenta": 0,
+  "vivienda": 0,
+  "alimentacion": 3809.65,
+  "baseImponible": 46190.35,
+  "excedente": 1469.3499999999985,
+  "valorExcedente": 367.33749999999964,
+  "IR": 5135.3375,
+  "createdAt": {
+    "$date": "2024-07-04T15:35:22.763Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T15:35:22.763Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686c17ddc8c1d026ebfae04"
+  },
+  "user": {
+    "$oid": "6686bf5adc8c1d026ebfac38"
+  },
+  "ingreso": 500000,
+  "salud": 15238.6,
+  "educacion": 0,
+  "vestimenta": 0,
+  "vivienda": 0,
+  "alimentacion": 0,
+  "baseImponible": 484761.4,
+  "excedente": 379181.4,
+  "valorExcedente": 140297.11800000002,
+  "IR": 163891.11800000002,
+  "createdAt": {
+    "$date": "2024-07-04T15:36:29.898Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T15:36:29.898Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686c1b1dc8c1d026ebfb1e4"
+  },
+  "user": {
+    "$oid": "6686bf5adc8c1d026ebfac38"
+  },
+  "ingreso": 800000,
+  "salud": 15236,
+  "educacion": 0,
+  "vestimenta": 0,
+  "vivienda": 0,
+  "alimentacion": 0,
+  "baseImponible": 784764,
+  "excedente": 679184,
+  "valorExcedente": 251298.08,
+  "IR": 274892.07999999996,
+  "createdAt": {
+    "$date": "2024-07-04T15:37:21.213Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T15:37:21.213Z"
+  },
+  "__v": 0
+}]
