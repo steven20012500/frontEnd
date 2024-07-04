@@ -13,6 +13,7 @@ export class ImpuestoComponent implements OnInit {
     private gastoService: GastoService,
     private storageService: StorageService
   ) { }
+  mensajeEnviado = false;
 
   maximosGastos = {
     salud: 15238.60,
@@ -57,6 +58,10 @@ export class ImpuestoComponent implements OnInit {
       this.gastoService.ingresarImpuestos(this.impuestos, token).subscribe({
         next: response => {
           console.log('Factura enviada', response);
+          this.mensajeEnviado = true;
+          setTimeout(() => {
+            this.mensajeEnviado = false;
+          }, 5000);
           this.resetForm();
         },
         error: error => {
@@ -71,6 +76,9 @@ export class ImpuestoComponent implements OnInit {
     } else {
       alert('Por favor complete todos los campos');
     }
+      setTimeout(() => {
+      this.mensajeEnviado = false;
+    }, 3000);
   }
 
   calculoImpuestos() {

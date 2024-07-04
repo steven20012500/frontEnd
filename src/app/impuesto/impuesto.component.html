@@ -1,57 +1,74 @@
-<form (ngSubmit)="enviarImpuestos()">
-    <div class="form-group">
-      <h1 class="text-center text-primary">Gastos Personales</h1>
+<div class="container mx-auto p-4">
+  <!-- Mensaje de confirmación -->
+  <div *ngIf="mensajeEnviado" class="fixed top-0 left-0 right-0 bg-green-500 text-white p-4 text-center z-50">
+    El impuesto ha sido enviado a la base de datos.
+  </div>
 
-      <div class="form-group">
-        <label for="ingreso" class="form-label">Ingreso:</label>
-        <input type="number" class="form-control" id="ingreso" name="ingreso" [(ngModel)]="impuestos.ingreso" min="0" required>
+  <div class="mt-16"> <!-- Añadir márgenes para evitar que el contenido se superponga con la alerta -->
+    <div class="flex flex-col md:flex-row">
+      <!-- Formulario -->
+      <div class="w-full md:w-1/2 p-4">
+        <form (ngSubmit)="enviarImpuestos()">
+          <div class="mb-8">
+            <h1 class="text-center text-3xl font-bold text-primary">Gastos Personales</h1>
+
+            <div class="mt-6">
+              <label for="ingreso" class="block text-gray-700 font-bold mb-2">Ingreso:</label>
+              <input type="number" class="w-full p-2 border border-gray-300 rounded" id="ingreso" name="ingreso" [(ngModel)]="impuestos.ingreso" min="0" required>
+            </div>
+            
+            <div class="mt-4">
+              <label for="salud" class="block text-gray-700 font-bold mb-2">Salud:</label>
+              <input type="number" class="w-full p-2 border border-gray-300 rounded" id="salud" name="salud" [(ngModel)]="impuestos.salud" (ngModelChange)="validarGasto('salud')" min="0" required>
+              <span class="text-gray-500 text-sm">Límite: $15238.65</span>
+            </div>
+            
+            <div class="mt-4">
+              <label for="educacion" class="block text-gray-700 font-bold mb-2">Educación:</label>
+              <input type="number" class="w-full p-2 border border-gray-300 rounded" id="educacion" name="educacion" [(ngModel)]="impuestos.educacion" (ngModelChange)="validarGasto('educacion')" min="0" required>
+              <span class="text-gray-500 text-sm">Límite: $3809.65</span>
+            </div>
+            
+            <div class="mt-4">
+              <label for="vestimenta" class="block text-gray-700 font-bold mb-2">Vestimenta:</label>
+              <input type="number" class="w-full p-2 border border-gray-300 rounded" id="vestimenta" name="vestimenta" [(ngModel)]="impuestos.vestimenta" (ngModelChange)="validarGasto('vestimenta')" min="0" required>
+              <span class="text-gray-500 text-sm">Límite: $3809.65</span>
+            </div>
+        
+            <div class="mt-4">
+              <label for="vivienda" class="block text-gray-700 font-bold mb-2">Vivienda:</label>
+              <input type="number" class="w-full p-2 border border-gray-300 rounded" id="vivienda" name="vivienda" [(ngModel)]="impuestos.vivienda" (ngModelChange)="validarGasto('vivienda')" min="0" required>
+              <span class="text-gray-500 text-sm">Límite: $3809.65</span>
+            </div>
+        
+            <div class="mt-4">
+              <label for="alimentacion" class="block text-gray-700 font-bold mb-2">Alimentación:</label>
+              <input type="number" class="w-full p-2 border border-gray-300 rounded" id="alimentacion" name="alimentacion" [(ngModel)]="impuestos.alimentacion" (ngModelChange)="validarGasto('alimentacion')" min="0" required>
+              <span class="text-gray-500 text-sm">Límite: $3809.65</span>
+            </div> 
+            
+            <div class="mt-4">
+              <h2 class="text-xl font-bold">Total deducción por gastos personales: {{gastosTotales()}}</h2>
+              <span class="text-gray-500 text-sm">Límite: $15238.60</span>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6">Enviar</button>
+          </div>
+        </form>
       </div>
       
-      <div class="form-group">
-       <label for="salud" class="form-label">Salud:</label>
-       <input type="number" class="form-control" id="salud" name="salud" [(ngModel)]="impuestos.salud" (ngModelChange)="validarGasto('salud')"  min="0" required>
-       <span class="input-group-text">Límite: $15238.65</span>
-
-     </div>
-     
-     <div class="form-group">
-       <label for="educacion" class="form-label">Educación:</label>
-       <input type="number" class="form-control" id="educacion" name="educacion" [(ngModel)]="impuestos.educacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
-       <span class="input-group-text">Límite: $3809.65</span>
-     </div>
-     
-     <div class="form-group">
-       <label for="vestimenta" class="form-label">Vestimenta:</label>
-       <input type="number" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="impuestos.vestimenta" (ngModelChange)="validarGasto('vestimenta')"  min="0" required>
-       <span class="input-group-text">Límite: $3809.65</span>
-     </div>
- 
-     <div class="form-group">
-       <label for="vivienda" class="form-label">Vivienda:</label>
-       <input type="number" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="impuestos.vivienda" (ngModelChange)="validarGasto('vivienda')"  min="0" required>
-       <span class="input-group-text">Límite: $3809.65</span>
-     </div>
- 
-     <div class="form-group">
-       <label for="alimentacion" class="form-label">Alimentación:</label>
-       <input type="number" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="impuestos.alimentacion" (ngModelChange)="validarGasto('salud')"  min="0" required>
-       <span class="input-group-text">Límite: $3809.65</span>
-     </div> 
-
-     <div class="form-group">
-      <h2>Total deducción por gastos personales: {{gastosTotales()}}</h2>
-      <span class="input-group-text">Límite: $15238.60</span>
+      <!-- Cálculos de impuestos -->
+      <div class="w-full md:w-1/2 p-4">
+        <div class="mt-6 md:mt-0">
+          <h3 class="text-xl font-bold mb-4">Detalle Impuesto: {{calculoImpuestos()}}</h3>
+          <div class="p-4 border rounded-lg bg-gray-50">
+            <span class="block text-gray-700 mb-2">Base Imponible: {{ impuestos.baseImponible }}</span>
+            <span class="block text-gray-700 mb-2">Excedente: {{ impuestos.excedente }}</span>
+            <span class="block text-gray-700 mb-2">Porcentaje Excedente: {{ impuestos.valorExcedente }}</span>
+            <span class="block text-gray-700 mb-2">Impuesto a la renta: {{ impuestos.IR }}</span>
+          </div>
+        </div>
+      </div>
     </div>
-    
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </div>
-  </form>
-
-  <div class="mt-5">
-    <h3>Detalle Impuesto: {{calculoImpuestos()}}</h3>
-    <span class="input-group-text">Base Imponible: {{ impuestos.baseImponible }}</span>
-      <span class="input-group-text">Excedente: {{ impuestos.excedente }}</span>
-        <span class="input-group-text">Porcentaje Excedente: {{ impuestos.valorExcedente }}</span>
-          <span class="input-group-text">Impuesto a la renta: {{ impuestos.IR}}</span>
   </div>
-  
+</div>

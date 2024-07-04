@@ -1,28 +1,35 @@
-<div class="container">
-  <div class="banner">
-    <img src="/assets/banner2.jpg" class="banner-img" alt="Banner">
+  <!-- Banner -->
+  <div class="banner mb-8">
+    <img src="/assets/banner2.jpg" class="w-full h-60 object-cover rounded-lg shadow-lg" alt="Banner">
   </div>
 
-  <div class="description text-center">
-    <h2>Descripción de la Aplicación Web</h2>
-    <p>
+  <!-- Descripción -->
+  <div class="description text-center my-8">
+    <h2 class="text-3xl font-bold text-gray-800">Descripción de la Aplicación Web</h2>
+    <p class="mt-4 text-gray-700 leading-relaxed">
       Esta aplicación web permite gestionar los gastos deducibles de forma eficiente. Puedes registrar, 
       visualizar y eliminar distintos tipos de gastos como vivienda, salud y educación. 
       Además, ofrece información adicional sobre cada tipo de gasto para ayudarte a tomar decisiones informadas.
     </p>
   </div>
 
-  <ul class="list-unstyled mt-4">
-    <li *ngFor="let deducible of deducibles" class="mb-3">
-      <div class="card">
-        <img [src]="deducible.imagen" class="card-img-top" alt="Imagen de {{ deducible.gasto }}">
-        <div class="card-body">
-          <h3 class="card-title"> {{ deducible.gasto }}</h3>
-          <p class="card-text">{{ deducible.descripcion }}</p>
-          <button (click)="informacion(deducible.informacionAdicional)" class="btn btn-info">Información</button>
-          <button (click)="borrarDeducible(deducible)" class="btn btn-warning ms-2">Borrar</button>
+  <!-- Lista de deducibles -->
+  <ul class="list-none mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <li *ngFor="let deducible of deducibles" class="mb-6">
+      <div class="border rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img [src]="deducible.imagen" class="w-full h-48 object-cover" alt="Imagen de {{ deducible.gasto }}">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">{{ deducible.gasto }}</h3>
+          <p class="mt-2 text-gray-600">{{ deducible.descripcion }}</p>
+          <div class="mt-4 flex justify-between">
+            <button (click)="informacion(deducible.informacionAdicional)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Información
+            </button>
+            <button (click)="borrarDeducible(deducible)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+              Borrar
+            </button>
+          </div>
         </div>
       </div>
     </li>
   </ul>
-</div>
