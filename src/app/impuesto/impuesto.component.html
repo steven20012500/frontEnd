@@ -4,7 +4,7 @@
     El impuesto ha sido enviado a la base de datos.
   </div>
 
-  <div class="mt-16"> <!-- Añadir márgenes para evitar que el contenido se superponga con la alerta -->
+  <div class="mt-0.01"> <!-- Añadir márgenes para evitar que el contenido se superponga con la alerta -->
     <div class="flex flex-col md:flex-row">
       <!-- Formulario -->
       <div class="w-full md:w-1/2 p-4">
@@ -58,8 +58,8 @@
       </div>
       
       <!-- Cálculos de impuestos -->
-      <div class="w-full md:w-1/2 p-4">
-        <div class="mt-6 md:mt-0">
+      <div class="w-full md:w-1/2 p-4 md:ml-auto">
+        <div class="sticky top-0 md:top-auto md:bottom-0">
           <h3 class="text-xl font-bold mb-4">Detalle Impuesto: {{calculoImpuestos()}}</h3>
           <div class="p-4 border rounded-lg bg-gray-50">
             <span class="block text-gray-700 mb-2">Base Imponible: {{ impuestos.baseImponible }}</span>
