@@ -54,4 +54,18 @@ export class EmpleadoComponent implements OnInit{
        }
      });
 }
+  eliminarEmpleado(id: string) {
+    this.empleadoService.deleteEmpleado(id).subscribe({
+      next: response => {
+        console.log('Empleado eliminado', response);
+        window.location.reload();
+      },
+      error: error => {
+        console.error('Error al eliminar empleado', error);
+      },
+      complete: () => {
+        console.log('Solicitud completada');
+      }
+    });
+  }
 }

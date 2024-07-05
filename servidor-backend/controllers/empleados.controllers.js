@@ -24,6 +24,16 @@ empleadosController.addEmpleado = async (req, res) => {
     }
 }
 
+empleadosController.deleteEmpleado = async (req, res) => {
+    try {
+        await Empleado.findByIdAndDelete(req.params.id);
+        res.json({ message: 'Empleado eliminado' });
+    } catch (error) {
+        console.error('Error al eliminar empleado:', error);
+        res.status(500).json({ message: 'Error interno al eliminar empleado' });
+    }
+}
+
 module.exports = empleadosController;
 
 

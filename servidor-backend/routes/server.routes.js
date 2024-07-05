@@ -13,5 +13,6 @@ router.get('/obtenerImpuestos', impuestos.obtenerImpuestos);
 router.get('/obtenerCedula', user.obtenerCedulaPorId);
 router.post('/agregarEmpleado', empleado.addEmpleado);
 router.get('/obtenerEmpleados', empleado.getEmpleados);
+router.delete('/eliminarEmpleado/:id', empleado.deleteEmpleado);
 //router.get('/tareas-privadas', user.getTasksPrivadas);
 module.exports = router;
