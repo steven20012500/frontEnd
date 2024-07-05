@@ -7,12 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class EmpleadoService {
   private apiUrl = 'http://localhost:3000/api-menu/agregarEmpleado'; // URL al archivo JSON
-
+  private apiUrl2 = 'http://localhost:3000/api-menu/obtenerEmpleados'; // URL al archivo JSON
   
   constructor(private http: HttpClient) { }
   
   agregarEmpleado(datos: any): Observable<any> {
     return this.http.post<any>(this.apiUrl, datos);
+  }
+  obtenerEmpleados(): Observable<any> {
+    return this.http.get<any>(this.apiUrl2);
   }
 
 }

@@ -12,5 +12,6 @@ router.post('/ingresarImpuestos',verifyToken, impuestos.addImpuesto);
 router.get('/obtenerImpuestos', impuestos.obtenerImpuestos);
 router.get('/obtenerCedula', user.obtenerCedulaPorId);
 router.post('/agregarEmpleado', empleado.addEmpleado);
+router.get('/obtenerEmpleados', empleado.getEmpleados);
 //router.get('/tareas-privadas', user.getTasksPrivadas);
 module.exports = router;

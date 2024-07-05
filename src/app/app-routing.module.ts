@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'reporte-formulario', component: ReporteFormularioComponent },
   { path: 'user-reporte', component: UserReporteComponent },
   { path: 'ingresarUser', component: IngresarUsuariosComponent, canActivate : [authGuard] },
-  { path: 'registroEmpleado', component: EmpleadoComponent },
+  { path: 'registroEmpleado', component: EmpleadoComponent, canActivate : [authGuard]},
 
   { path: 'login', component: LoginComponent },
 

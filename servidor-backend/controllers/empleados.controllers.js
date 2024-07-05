@@ -4,6 +4,11 @@ require('fs');
 
 const empleadosController = {};
 
+empleadosController.getEmpleados = async (req, res) => {
+    const empleados = await Empleado.find();
+    res.json(empleados);
+}
+
 
 empleadosController.addEmpleado = async (req, res) => {
     const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;

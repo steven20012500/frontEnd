@@ -1,50 +1,54 @@
-<div class="row">
-    <div class="col-md-4">
-    <div class="card">
-    <div class="card-body">
-   
-    <h1>Registro de Nuevo Empleado</h1>
-    <form (ngSubmit)="ingresarEmpleado()" class="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
-   
+<div class="flex flex-wrap">
+  <div class="w-full md:w-1/3 p-4">
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h1 class="text-2xl font-bold mb-6">Registro de Nuevo Empleado</h1>
+      <form (ngSubmit)="ingresarEmpleado()">
         <div class="mb-4">
-          <label for="cedula" class="block text-sm font-medium text-gray-700">Nombre:</label>
-          <input type="cedula" id="cedula" name="cedula" [(ngModel)]="empleados.nombre" 
+          <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" [(ngModel)]="empleados.nombre" 
                 class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
         </div>
-    
         <div class="mb-4">
-          <label for="password" class="block text-sm font-medium text-gray-700">Cargo:</label>
-          <input type="password" id="password" name="password" [(ngModel)]="empleados.cargo" 
+          <label for="cargo" class="block text-sm font-medium text-gray-700">Cargo:</label>
+          <input type="text" id="cargo" name="cargo" [(ngModel)]="empleados.cargo" 
                 class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
         </div>
-
         <div class="mb-4">
-            <label for="password" class="block text-sm font-medium text-gray-700">Departamento:</label>
-            <input type="password" id="password" name="password" [(ngModel)]="empleados.departamento" 
-                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-          </div>
-    
-          <div class="mb-4">
-            <label for="password" class="block text-sm font-medium text-gray-700">Sueldo:</label>
-            <input type="password" id="password" name="password" [(ngModel)]="empleados.sueldo" 
-                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-          </div>
-      
-    
+          <label for="departamento" class="block text-sm font-medium text-gray-700">Departamento:</label>
+          <input type="text" id="departamento" name="departamento" [(ngModel)]="empleados.departamento" 
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+        </div>
+        <div class="mb-4">
+          <label for="sueldo" class="block text-sm font-medium text-gray-700">Sueldo:</label>
+          <input type="number" id="sueldo" name="sueldo" [(ngModel)]="empleados.sueldo" 
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+        </div>
         <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           Enviar
         </button>
       </form>
-    <div class="col-md-8">
-    <table class="table table-striped">
-    <thead>
-    <tr><th>Nombre</th>
-    <th>Cargo</th>
-    <th>Departamento</th>
-    <th>Operaciones</th></tr>
-    </thead>
-    <tbody>
-   
-    </tbody>
-    </table>
     </div>
+  </div>
+  <div class="w-full md:w-2/3 p-4">
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cargo</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Departamento</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sueldo</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let empleados of empleado">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ empleados.nombre }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ empleados.cargo }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ empleados.departamento }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ empleados.sueldo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
