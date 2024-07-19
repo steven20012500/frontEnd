@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/users'; // URL al archivo JSON
-  private apiUrl2 = 'http://localhost:3000/api-menu/registro';
-  private apiUrl3 = 'http://localhost:3000/api-menu/obtenerCedula';
+  private apiUrl = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/users'; // URL al archivo JSON
+  private apiUrl2 = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/registro';
+  private apiUrl3 = 'http://ec2-18-191-140-37.us-east-2.compute.amazonaws.com:3000/api-menu/obtenerCedula';
 
   constructor(private http: HttpClient) { }
 
