@@ -22,7 +22,10 @@ export class LoginComponent {
     this.authService.loginUser(this.usuarios).subscribe({
       next: res => {
         this.storageService.setItem('token', res.token);
-        this.router.navigate(['/galeria']);
+        //quiero que me redireccione a la galeria y se actualice la pagina
+        this.router.navigate(['galeria']).then(() => {
+          window.location.reload();
+        });
       },
       error: err => console.error(err)
     });

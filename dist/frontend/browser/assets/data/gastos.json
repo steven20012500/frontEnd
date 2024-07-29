@@ -1,0 +1,14 @@
+[
+    {
+      "ruc": "1234567890",
+      "valor": 100,
+      "gasto": "Salud",
+      "descripcion": "Gasto médico"
+    },
+    {
+      "ruc": "0987654321",
+      "valor": 200,
+      "gasto": "Vivienda"
+    }
+  ]
+  

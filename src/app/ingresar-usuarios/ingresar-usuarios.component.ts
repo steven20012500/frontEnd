@@ -8,6 +8,8 @@ import { User } from '../class/user';
   styleUrl: './ingresar-usuarios.component.css'
 })
 export class IngresarUsuariosComponent {
+  mensajeEnviado = false;
+
   usuarios: User = {
     _id: '',
     cedula: '',
@@ -19,6 +21,10 @@ export class IngresarUsuariosComponent {
      this.userService.agregarUser(this.usuarios).subscribe({
        next: response => {
          console.log('Usuario enviado', response);
+         this.mensajeEnviado = true;
+         setTimeout(() => {
+          this.mensajeEnviado = false;
+        }, 2500);
          this.usuarios = {
           _id: '',
           cedula: '',

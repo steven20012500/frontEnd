@@ -20,8 +20,8 @@ const routes: Routes = [
   { path: 'reporte', component: ReporteComponent },
   { path: 'reporte-formulario', component: ReporteFormularioComponent },
   { path: 'user-reporte', component: UserReporteComponent },
-  { path: 'ingresarUser', component: IngresarUsuariosComponent, canActivate : [authGuard] },
-  { path: 'registroEmpleado', component: EmpleadoComponent, canActivate : [authGuard]},
+  { path: 'ingresarUser', component: IngresarUsuariosComponent},
+  { path: 'registroEmpleado', component: EmpleadoComponent},
 
   { path: 'login', component: LoginComponent },
 

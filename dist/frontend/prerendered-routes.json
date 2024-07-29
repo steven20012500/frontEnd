@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/formulario",
+    "/galeria",
+    "/impuesto",
+    "/informacion",
+    "/ingresarUser",
+    "/login",
+    "/registroEmpleado",
+    "/reporte",
+    "/reporte-formulario",
+    "/user-reporte"
+  ]
+}
