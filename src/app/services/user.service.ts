@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/users'; // URL al archivo JSON
-  private apiUrl2 = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/registro';
-  private apiUrl3 = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/obtenerCedula';
+  private apiUrl = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/users'; // URL al archivo JSON
+  private apiUrl2 = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/registro';
+  private apiUrl3 = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/obtenerCedula';
   //private apiUrl4 = 'https://jsonplaceholder.typicode.com/users'; // URL al archivo JSON
 
   constructor(private http: HttpClient) { }

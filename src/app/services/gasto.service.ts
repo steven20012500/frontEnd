@@ -8,13 +8,13 @@ import { Gasto } from '../class/gasto';
   providedIn: 'root'
 })
 export class GastoService {
-  private apiUrl = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/agregarFactura'; // URL al archivo JSON
-  private apiUrl4= 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/ingresarImpuestos'
+  private apiUrl = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/agregarFactura'; // URL al archivo JSON
+  private apiUrl4= 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/ingresarImpuestos'
 
-  private apiUrl1 = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/obtenerDatos'; // URL al archivo JSON
-  private apiUrl2 = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/agregarFormulario'
-  private apiUrl3 = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/facturas'
-  private apiUrl5 = 'http://ec2-44-212-25-145.compute-1.amazonaws.com:3000/api-menu/obtenerImpuestos'; // URL al archivo JSON
+  private apiUrl1 = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/obtenerDatos'; // URL al archivo JSON
+  private apiUrl2 = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/agregarFormulario'
+  private apiUrl3 = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/facturas'
+  private apiUrl5 = 'http://ec2-44-211-156-254.compute-1.amazonaws.com:3000/api-menu/obtenerImpuestos'; // URL al archivo JSON
 
   constructor(private http: HttpClient) { }
   
